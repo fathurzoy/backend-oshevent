@@ -3,7 +3,7 @@ require("dotenv").config();
 const { SECRET_KEY } = process.env;
 
 const inputToken = (data) => {
-  const token = jwt.sign(data, SECRET_KEY);
+  const token = jwt.sign(data, "telkom");
   return token;
 };
 
@@ -17,7 +17,7 @@ const tokenCheck = (req, res, next) => {
     });
   }
 
-  jwt.verify(token, process.env.SECRET_KEY, (err, username) => {
+  jwt.verify(token, "telkom", (err, username) => {
     if (err) {
       res.status(401).json({
         success: false,
