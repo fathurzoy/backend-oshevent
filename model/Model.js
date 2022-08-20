@@ -109,6 +109,10 @@ const Participants = sequelize.define("participants", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  birthdate: {
+    type: DataTypes.DATEONLY,
+    allowNull: false,
+  },
   gender: {
     type: DataTypes.ENUM(["laki-laki", "perempuan"]),
     allowNull: false,
