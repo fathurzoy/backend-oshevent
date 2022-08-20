@@ -97,10 +97,6 @@ const EventParticipants = sequelize.define("event_participants", {
 });
 
 const Participants = sequelize.define("participants", {
-  id_participant: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
   country: {
     type: DataTypes.STRING,
     allowNull: false,
