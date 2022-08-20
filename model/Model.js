@@ -3,6 +3,14 @@ const sequelize = require("../model/connection");
 
 //TABLE ADMIN
 const Users = sequelize.define("users", {
+  country: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  organization: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   username: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -28,9 +36,13 @@ const Users = sequelize.define("users", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  gender: {
-    type: DataTypes.ENUM(["laki-laki", "perempuan"]),
-    defaultValue: "laki-laki",
+  address: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  city: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
 });
 
