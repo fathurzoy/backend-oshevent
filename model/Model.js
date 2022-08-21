@@ -86,6 +86,10 @@ const EventParticipants = sequelize.define("event_participants", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  organization: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
